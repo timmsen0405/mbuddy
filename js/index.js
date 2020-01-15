@@ -22,7 +22,8 @@ function initApp() {
 }
 
 
-function changeDisplay(list, checkStatus) {
+function changeDisplay(className, checkStatus) {
+    var list = document.getElementsByClassName(className);
     if (checkStatus == "true") {
         list.classList.remove('nodDisplay')
     }
@@ -32,4 +33,4 @@ function changeDisplay(list, checkStatus) {
 window.onload = onLoad;
 document.addEventListener('deviceready', initApp, false); //deviceready is a cordova status.
 
-document.getElementById("tgPartner").addEventListener("change", changeDisplay(getElementsByClassName("partnerScreen", this.status)))
+document.getElementById("tgPartner").addEventListener("change", changeDisplay("partnerScreen", this.status)))
