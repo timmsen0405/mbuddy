@@ -42,5 +42,5 @@ function changeDisplay(className, cbStatus) {
 window.onload = onLoad;
 document.addEventListener('deviceready', initApp, false); //deviceready is a cordova status.
 
-document.getElementById("tgPartner").addEventListener("click", changeDisplay("partnerScreen", this.status))
+document.getElementById("tgPartner").addEventListener("click", function () { changeDisplay("partnerScreen", this.status) })
 
