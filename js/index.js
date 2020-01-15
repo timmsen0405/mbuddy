@@ -24,10 +24,12 @@ function initApp() {
 
 function changeDisplay(className, cbStatus) {
     var list = document.getElementsByClassName(className);
-    if (cbStatus == "true") {
-        list.classList.remove('nodDisplay')
+    for (var i = 0; i < list.length; i++) {
+        if (cbStatus == "true") {
+            list[i].classList.remove('nodDisplay')
+        }
+        else { list[i].classList.add('noDisplay') }
     }
-    else { list.classList.add('noDisplay') }
 }
 
 window.onload = onLoad;
