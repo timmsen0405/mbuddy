@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval';
+style-src 'self' 'unsafe-inline';
+media-src *;
+img-src 'self' data: content:;">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="node_modules/framework7/css/framework7.bundle.min.css">
+    <link rel="manifest" href="mbuddy.webmanifest">
+    <title>Mobile Buddy</title>
+</head>
+
+<body>
+
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="home" class="page">
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner sliding">
+                        <div class="title">Kunde anfordern</div>
+                    </div>
+                </div>
+                <!-- Bottom Toolbar -->
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <form class="list" id="my-form">
+                        <ul>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Firma</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="company" placeholder="Firmierung hier eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Straße</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="street" placeholder="Straße hier eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Hausnummer</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="houseno" placeholder="Hausnr. hier eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">PLZ</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="zip-code"
+                                                placeholder="Postleitzahl hier eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Ort</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="city" placeholder="Ort hier eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Zahlungsbediongung</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="zterms"
+                                                placeholder="Zahlungsbedingung hier eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Skontobasis</div>
+                                        <div class="item-input-wrap">
+                                            <select name="conda">
+                                                <option value="K1" selected>Warenwert</option>
+                                                <option value="K2">Rechnungsendbetrag</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Telefon</div>
+                                        <div class="item-input-wrap">
+                                            <input type="tel" name="tel" placeholder="Telefonnummer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Mobil</div>
+                                        <div class="item-input-wrap">
+                                            <input type="tel" name="mobilephone" placeholder="Mobilnummer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">E-mail</div>
+                                        <div class="item-input-wrap">
+                                            <input type="email" name="email" placeholder="E-mail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Kundenklasse</div>
+                                        <div class="item-input-wrap">
+                                            <select name="kukla">
+                                                <option value="a1" selected>A1-Kunde</option>
+                                                <option value="a2" selected>A2-Kunde</option>
+                                                <option value="a3" selected>A1-Kunde</option>
+                                                <option value="b1">B1-Kunde</option>
+                                                <option value="b2">B2-Kunde</option>
+                                                <option value="b3">B3-Kunde</option>
+                                                <option value="c1">C1-Kunde</option>
+                                                <option value="c2">C2-Kunde</option>
+                                                <option value="c3">C3-Kunde</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Partnerdaten</div>
+                                        <div class="item-after">
+                                            <label class="toggle toggle-init">
+                                                <input type="checkbox" name="toggle-partners" value="yes"><i
+                                                    class="toggle-icon"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="noDisplay">
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Abr. Händler</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="bill-to"
+                                                placeholder="(Optional) Abr. Händler hier eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="noDisplay">
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Abw. Rechnungsempfänger</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="bill-to"
+                                                placeholder="(Optional) Abw. RE hier eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                                </liclass="noDisplay">
+                            <li class="noDisplay">
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Abw. Regulierer</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="payer"
+                                                placeholder="(Optional) Abw. RG hier eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Ansprechpartner</div>
+                                        <div class="item-after">
+                                            <label class="toggle toggle-init">
+                                                <input type="checkbox" name="toggle-contact" value="yes"><i
+                                                    class="toggle-icon"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                    <div class="block block-strong row">
+                        <div class="col"><a class="button convert-form-to-data" href="#">Get Data</a></div>
+                        <div class="col"><a class="button fill-form-from-data" href="#">Fill Form</a></div>
+                    </div>
+                </div>
+
+
+
+                <script type="text/javascript" src="node_modules/framework7/js/framework7.bundle.min.js"></script>
+                <script type="text/javascript" src="cordova.js"></script>
+                <script type="text/javascript" src="js/index.js"></script>
+                <script>
+                    if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.register('service-worker.js');
+                    }
+                </script>
+</body>
+
+</html>
