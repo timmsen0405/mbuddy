@@ -22,9 +22,9 @@ function initApp() {
 }
 
 
-function changeDisplay(className, checkStatus) {
+function changeDisplay(className, cbStatus) {
     var list = document.getElementsByClassName(className);
-    if (checkStatus == "true") {
+    if (cbStatus == "true") {
         list.classList.remove('nodDisplay')
     }
     else { list.classList.add('noDisplay') }
