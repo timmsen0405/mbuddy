@@ -23,12 +23,15 @@ function initApp() {
 
 
 function changeDisplay(className, cbStatus) {
+    console.log(cbStatus);
     var list = document.getElementsByClassName(className);
     for (var i = 0; i < list.length; i++) {
-        if (cbStatus == "true") {
-            list[i].classList.remove('noDisplay')
+        if (cbStatus === "true") {
+            list[i].classList.remove('noDisplay');
         }
-        else { list[i].classList.add('noDisplay') }
+        else {
+            list[i].classList.add('noDisplay');
+        }
     }
 }
 
