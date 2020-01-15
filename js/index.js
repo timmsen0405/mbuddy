@@ -1,3 +1,7 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+}
+
 function onLoad() {
     console.log("Load")
     if (!window.usingCordova) //triggers when opened in browser (no cordova)
@@ -38,8 +42,5 @@ function changeDisplay(className, cbStatus) {
 window.onload = onLoad;
 document.addEventListener('deviceready', initApp, false); //deviceready is a cordova status.
 
-document.getElementById("tgPartner").addEventListener("click", changeDisplay("partnerScreen", this.status))
+document.getElementById("tgPartner").addEventListener("click", changeDisplay("partnerScreen", this.value))
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js');
-}
