@@ -26,11 +26,11 @@ function initApp() {
 }
 
 
-function changeDisplay(className, cbStatus) {
-    console.log("Checkbox-Status: ", cbStatus);
+function changeDisplay(className, cbVal) {
+    console.log("Checkbox-Status: ", cbVal);
     var list = document.getElementsByClassName(className);
     for (var i = 0; i < list.length; i++) {
-        if (cbStatus === "true") {
+        if (cbVal) {
             list[i].classList.remove('noDisplay');
         }
         else {
@@ -42,5 +42,7 @@ function changeDisplay(className, cbStatus) {
 window.onload = onLoad;
 document.addEventListener('deviceready', initApp, false); //deviceready is a cordova status.
 
-document.getElementById("tgPartner").addEventListener("click", function () { changeDisplay("partnerScreen", this.status) })
+document.getElementById("tgPartner").addEventListener("change", function () { changeDisplay("partnerScreen", this.checked) })
+
+document.getElementById("tgContact").addEventListener("change", function () { changeDisplay("contactScreen", this.checked) })
 

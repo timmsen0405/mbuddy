@@ -24,6 +24,7 @@ img-src 'self' data: content:;">
 
         <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
+
             <!-- Initial Page, "data-name" contains page name -->
             <div data-name="home" class="page">
                 <!-- Top Navbar -->
@@ -33,11 +34,11 @@ img-src 'self' data: content:;">
                         <div class="title">Kunde anfordern</div>
                     </div>
                 </div>
-                <!-- Bottom Toolbar -->
 
                 <!-- Scrollable page content -->
                 <div class="page-content">
-                    <form class="list" id="my-form">
+                    <a href="#" class="button login-screen-open" data-login-screen=".login-screen">Open As Modal</a>
+                    <form class="list" id="customer-form">
                         <ul>
                             <li>
                                 <div class="item-content item-input">
@@ -151,8 +152,8 @@ img-src 'self' data: content:;">
                                         <div class="item-input-wrap">
                                             <select name="kukla">
                                                 <option value="a1" selected>A1-Kunde</option>
-                                                <option value="a2" selected>A2-Kunde</option>
-                                                <option value="a3" selected>A1-Kunde</option>
+                                                <option value="a2">A2-Kunde</option>
+                                                <option value="a3">A3-Kunde</option>
                                                 <option value="b1">B1-Kunde</option>
                                                 <option value="b2">B2-Kunde</option>
                                                 <option value="b3">B3-Kunde</option>
@@ -170,8 +171,7 @@ img-src 'self' data: content:;">
                                         <div class="item-title">Partnerdaten</div>
                                         <div class="item-after">
                                             <label class="toggle toggle-init">
-                                                <input type="checkbox" id="tgPartner" name="toggle-partners"
-                                                    value="yes">
+                                                <input type="checkbox" id="tgPartner" name="toggle-partners">
                                                 <i class="toggle-icon"></i>
                                             </label>
                                         </div>
@@ -217,9 +217,72 @@ img-src 'self' data: content:;">
                                         <div class="item-title">Ansprechpartner</div>
                                         <div class="item-after">
                                             <label class="toggle toggle-init">
-                                                <input type="checkbox" id="tgContact" name="toggle-contact"
-                                                    value="yes"><i class="toggle-icon"></i>
+                                                <input type="checkbox" id="tgContact" name="toggle-contact">
+                                                <i class="toggle-icon"></i>
                                             </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contactScreen noDisplay">
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Anrede</div>
+                                        <div class="item-input-wrap">
+                                            <select name="salutation">
+                                                <option value="mr" selected>Herr</option>
+                                                <option value="mrs" selected>Frau</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contactScreen noDisplay">
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Vorname</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="surname" placeholder="Vorname eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contactScreen noDisplay">
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Nachname</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="lastname" placeholder="Nachname eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contactScreen noDisplay">
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Telefon</div>
+                                        <div class="item-input-wrap">
+                                            <input type="tel" name="cp-tel" placeholder="Telefonnummer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contactScreen noDisplay">
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Mobil</div>
+                                        <div class="item-input-wrap">
+                                            <input type="tel" name="cp-mobilephone" placeholder="Mobilnummer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contactScreen noDisplay">
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">E-mail</div>
+                                        <div class="item-input-wrap">
+                                            <input type="email" name="cp-email" placeholder="E-mail">
                                         </div>
                                     </div>
                                 </div>
@@ -230,13 +293,60 @@ img-src 'self' data: content:;">
                         <div class="col"><a class="button convert-form-to-data" href="#">Get Data</a></div>
                         <div class="col"><a class="button fill-form-from-data" href="#">Fill Form</a></div>
                     </div>
+
+                    <div class="login-screen">
+                        <div class="view">
+                            <div class="page">
+                                <div class="page-content login-screen-content">
+                                    <div class="login-screen-title">Sales Buddy</div>
+                                    <form>
+                                        <div class="list">
+                                            <ul>
+                                                <li class="item-content item-input">
+                                                    <div class="item-inner">
+                                                        <div class="item-title item-label">Username</div>
+                                                        <div class="item-input-wrap">
+                                                            <input type="text" name="username"
+                                                                placeholder="Your username">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item-content item-input">
+                                                    <div class="item-inner">
+                                                        <div class="item-title item-label">Password</div>
+                                                        <div class="item-input-wrap">
+                                                            <input type="password" name="password"
+                                                                placeholder="Your password">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="list">
+                                            <ul>
+                                                <li><a class="item-link list-button" href="#">Sign In</a></li>
+                                            </ul>
+                                            <div class="block-footer">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                <p><a class="link login-screen-close" href="#">Close Login Screen</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
+            </div>
+        </div>
 
 
-
-                <script type="text/javascript" src="node_modules/framework7/js/framework7.bundle.min.js"></script>
-                <script type="text/javascript" src="cordova.js"></script>
-                <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="node_modules/framework7/js/framework7.bundle.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
