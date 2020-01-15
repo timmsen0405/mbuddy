@@ -27,7 +27,7 @@ function initApp() {
 
 
 function changeDisplay(className, cbStatus) {
-    console.log("PartnerData-Checkbox ", cbStatus);
+    console.log("Checkbox-Status: ", cbStatus);
     var list = document.getElementsByClassName(className);
     for (var i = 0; i < list.length; i++) {
         if (cbStatus === "true") {
