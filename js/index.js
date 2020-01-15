@@ -26,7 +26,7 @@ function changeDisplay(className, cbStatus) {
     var list = document.getElementsByClassName(className);
     for (var i = 0; i < list.length; i++) {
         if (cbStatus == "true") {
-            list[i].classList.remove('nodDisplay')
+            list[i].classList.remove('noDisplay')
         }
         else { list[i].classList.add('noDisplay') }
     }
@@ -36,3 +36,7 @@ window.onload = onLoad;
 document.addEventListener('deviceready', initApp, false); //deviceready is a cordova status.
 
 document.getElementById("tgPartner").addEventListener("click", changeDisplay("partnerScreen", this.status))
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+}
