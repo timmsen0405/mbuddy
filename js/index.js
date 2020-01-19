@@ -46,3 +46,13 @@ document.getElementById("tgPartner").addEventListener("change", function () { ch
 
 document.getElementById("tgContact").addEventListener("change", function () { changeDisplay("contactScreen", this.checked) })
 
+var outlinedButtons = document.getElementsByClassName("button-outline");
+for (var i = 0; i < outlinedButtons.length; i++) {
+    outlinedButtons[i].addEventListener("click", function () {
+        for (var i = 0; i < outlinedButtons.length; i++) {
+            outlinedButtons[i].classList.toggle("button-acive");
+        };
+    });
+}
+
+
