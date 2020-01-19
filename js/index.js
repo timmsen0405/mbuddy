@@ -50,8 +50,10 @@ var outlinedButtons = document.getElementsByClassName("button-outline");
 for (var i = 0; i < outlinedButtons.length; i++) {
     outlinedButtons[i].addEventListener("click", function () {
         for (var i = 0; i < outlinedButtons.length; i++) {
-            outlinedButtons[i].classList.toggle("button-acive");
+            outlinedButtons[i].classList.remove("button-acive");
+            console.log("remove button-active: " + i);
         };
+        outlinedButtons[i].classList.add("button-active");
     });
 }
 
