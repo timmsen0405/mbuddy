@@ -38,6 +38,12 @@ img-src 'self' data: content:;">
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <a href="#" class="button login-screen-open" data-login-screen=".login-screen">Open As Modal</a>
+                    <p class="segmented">
+                        <button class="button button-outline">Neuanlage</button>
+                        <button class="button button-outline">Erweitern</button>
+                        <button class="button button-outline">Ändern</button>
+                        <button class="button button-outline button-active">Bonität</button>
+                    </p>
                     <form class="list" id="customer-form">
                         <ul>
                             <li>
@@ -104,30 +110,6 @@ img-src 'self' data: content:;">
                             <li>
                                 <div class="item-content item-input">
                                     <div class="item-inner">
-                                        <div class="item-title item-label">Zahlungsbediongung</div>
-                                        <div class="item-input-wrap">
-                                            <input type="text" name="zterms"
-                                                placeholder="Zahlungsbedingung hier eintragen.">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-content item-input">
-                                    <div class="item-inner">
-                                        <div class="item-title item-label">Skontobasis</div>
-                                        <div class="item-input-wrap">
-                                            <select name="conda">
-                                                <option value="K1" selected>Warenwert</option>
-                                                <option value="K2">Rechnungsendbetrag</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-content item-input">
-                                    <div class="item-inner">
                                         <div class="item-title item-label">Telefon</div>
                                         <div class="item-input-wrap">
                                             <input type="tel" name="tel" placeholder="Telefonnummer">
@@ -184,6 +166,30 @@ img-src 'self' data: content:;">
                                                 <input type="checkbox" id="tgPartner" name="toggle-partners">
                                                 <i class="toggle-icon"></i>
                                             </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Zahlungsbediongung</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="zterms"
+                                                placeholder="Zahlungsbedingung hier eintragen.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Skontobasis</div>
+                                        <div class="item-input-wrap">
+                                            <select name="conda">
+                                                <option value="K1" selected>Warenwert</option>
+                                                <option value="K2">Rechnungsendbetrag</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
