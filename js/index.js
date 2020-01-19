@@ -44,7 +44,7 @@ window.onload = onLoad;
 ///// EVENT-LISTENERS /////
 document.addEventListener('deviceready', initApp, false); //deviceready is a cordova status.
 
-var cntxtBttns = document.getElementsByClassName("button-outline");
+/* var cntxtBttns = document.getElementsByClassName("button-outline");
 for (var i = 0; i < cntxtBttns.length; i++) {
     cntxtBttns[i].addEventListener("click", function () {
         for (var j = 0; j < cntxtBttns.length; j++) {
@@ -52,7 +52,7 @@ for (var i = 0; i < cntxtBttns.length; i++) {
         };
         this.classList.add("button-active");
     });
-}
+} */
 
 document.getElementById("tgPartner").addEventListener("change", function () { changeDisplay("partnerScreen", this.checked) })
 
