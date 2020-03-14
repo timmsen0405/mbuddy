@@ -22,7 +22,6 @@ function initApp() {
             swipe: 'left',
         }
     });
-    var $$ = Dom7;
 }
 
 
@@ -61,7 +60,7 @@ document.getElementById("tgContact").addEventListener("change", function () { ch
 document.getElementById("cb-bill2mail").addEventListener("change", function () { changeDisplay("bill2mail", this.checked) })
 
 
-
+var $$ = Dom7;
 
 $$('.convert-form-to-data').on('click', function () {
     var formData = app.form.convertToData('#form-kna');
