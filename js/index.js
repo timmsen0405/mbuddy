@@ -17,7 +17,7 @@ function initApp() {
     var app = new Framework7({
         root: '#app',
         name: 'Mobile Buddy',
-        id: 'com.application.mbuddy',
+        id: 'com.applicaiton.mbuddy',
         panel: {
             swipe: 'left',
         }
