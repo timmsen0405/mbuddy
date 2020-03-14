@@ -41,7 +41,7 @@ function changeDisplay(className, cbVal) {
 var $$ = Dom7;
 
 $$('.convert-form-to-data').on('click', function () {
-    var formData = app.form.convertToData('#form-kna');
+    var formData = app.form.convertToData('form-kna');
     alert(JSON.stringify(formData));
 });
 
