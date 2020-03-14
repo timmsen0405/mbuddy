@@ -41,10 +41,31 @@ function changeDisplay(className, cbVal) {
 var $$ = Dom7;
 
 $$('.convert-form-to-data').on('click', function () {
-    var formData = app.form.convertToData('form-kna');
+    var formData = app.form.convertToData('#form-kna');
     alert(JSON.stringify(formData));
 });
 
+$$('.fill-form-from-data').on('click', function () {
+    var formData = {
+        'name1': 'Mustermann GmbH',
+        'name2': 'Hauptverwaltung',
+        'street': 'Musterstrasse',
+        'houseno': '1',
+        'zip-code': '12345',
+        'city': 'Musterhausen',
+        'tel': '0123456789',
+        'mobilephone': '0987654321',
+        'email': 'info@mustermann.de',
+        'kukla': 'a3',
+        'toggle-contact': ['yes'],
+        'cp-surname': 'Max',
+        'cp-lastname': 'Mustermann',
+        'cp-tel': '022148753',
+        'cp-mobilephone': '0152345678',
+        'cp-email': 'max@mustermann.de'
+    }
+    app.form.fillFromData('#form-kna', formData);
+});
 
 window.onload = onLoad;
 
