@@ -37,7 +37,8 @@ img-src 'self' data: content:;">
 
                 <!-- Scrollable page content -->
                 <div class="page-content">
-                    <a href="#" class="button login-screen-open" data-login-screen=".login-screen">Open As Modal</a>
+                    <!--Modal login screen-->
+                    <a href="#" class="button login-screen-open" data-login-screen=".login-screen">Login</a>
                     <!-- Context Buttons to switch between debitor creation, augmentation, change and  -->
                     <!--<p class="segmented">
                         <button class="button button-outline button-active" id="cntxtBttn-0">Neu</button>
@@ -198,8 +199,9 @@ img-src 'self' data: content:;">
                                                             <div class="item-inner">
                                                                 <div class="item-title item-label">Anrede</div>
                                                                 <div class="item-input-wrap">
-                                                                    <select name="salutation">
-                                                                        <option value="mr" selected>Herr</option>
+                                                                    <select name="salutation"
+                                                                        placeholder="Anrede auswählen.">
+                                                                        <option value="mr">Herr</option>
                                                                         <option value="cp-mrs">Frau</option>
                                                                     </select>
                                                                 </div>
@@ -438,7 +440,7 @@ img-src 'self' data: content:;">
                             </li>
                         </ul>
                     </div>
-
+                    <!--Interactive Buttons-->
                     <div class="block block-strong row">
                         <div class="col"><a class="button convert-form-to-data" href="#">Get Data</a></div>
                         <!--<div class="col"><a class="button fill-form-from-data" href="#">Fill Form</a></div-->
