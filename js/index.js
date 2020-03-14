@@ -22,7 +22,6 @@ function initApp() {
             swipe: 'left',
         }
     });
-    var $$ = Dom7;
 }
 
 
@@ -39,7 +38,7 @@ function changeDisplay(className, cbVal) {
     }
 }
 
-
+var $$ = Dom7;
 $$('.convert-form-to-data').on('click', function () {
     var formData = app.form.convertToData('#form-kna');
     console.log("klick");
