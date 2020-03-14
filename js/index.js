@@ -22,6 +22,7 @@ function initApp() {
             swipe: 'left',
         }
     });
+    var $$ = Dom7;
 }
 
 
@@ -38,7 +39,29 @@ function changeDisplay(className, cbVal) {
     }
 }
 
-var $$ = Dom7;
+window.onload = onLoad;
+
+///// EVENT-LISTENERS /////
+document.addEventListener('deviceready', initApp, false); //deviceready is a cordova status.
+
+/* var cntxtBttns = document.getElementsByClassName("button-outline");
+for (var i = 0; i < cntxtBttns.length; i++) {
+    cntxtBttns[i].addEventListener("click", function () {
+        for (var j = 0; j < cntxtBttns.length; j++) {
+            cntxtBttns[j].classList.remove("button-active");
+        };
+        this.classList.add("button-active");
+    });
+} */
+
+document.getElementById("tgPartner").addEventListener("change", function () { changeDisplay("partnerScreen", this.checked) })
+
+document.getElementById("tgContact").addEventListener("change", function () { changeDisplay("contactScreen", this.checked) })
+
+document.getElementById("cb-bill2mail").addEventListener("change", function () { changeDisplay("bill2mail", this.checked) })
+
+
+
 
 $$('.convert-form-to-data').on('click', function () {
     var formData = app.form.convertToData('#form-kna');
@@ -66,27 +89,4 @@ $$('.fill-form-from-data').on('click', function () {
     }
     app.form.fillFromData('#form-kna', formData);
 });
-
-window.onload = onLoad;
-
-///// EVENT-LISTENERS /////
-document.addEventListener('deviceready', initApp, false); //deviceready is a cordova status.
-
-/* var cntxtBttns = document.getElementsByClassName("button-outline");
-for (var i = 0; i < cntxtBttns.length; i++) {
-    cntxtBttns[i].addEventListener("click", function () {
-        for (var j = 0; j < cntxtBttns.length; j++) {
-            cntxtBttns[j].classList.remove("button-active");
-        };
-        this.classList.add("button-active");
-    });
-} */
-
-document.getElementById("tgPartner").addEventListener("change", function () { changeDisplay("partnerScreen", this.checked) })
-
-document.getElementById("tgContact").addEventListener("change", function () { changeDisplay("contactScreen", this.checked) })
-
-document.getElementById("cb-bill2mail").addEventListener("change", function () { changeDisplay("bill2mail", this.checked) })
-
-
 
