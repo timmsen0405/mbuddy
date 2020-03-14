@@ -42,6 +42,7 @@ function changeDisplay(className, cbVal) {
 
 $$('.convert-form-to-data').on('click', function () {
     var formData = app.form.convertToData('#form-kna');
+    console.log("klick");
     console.log(JSON.stringify(formData));
 });
 
