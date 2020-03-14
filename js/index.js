@@ -22,7 +22,7 @@ function initApp() {
             swipe: 'left',
         }
     });
-
+    var $$ = Dom7;
 }
 
 
@@ -38,6 +38,13 @@ function changeDisplay(className, cbVal) {
         }
     }
 }
+
+
+$$('.convert-form-to-data').on('click', function () {
+    var formData = app.form.convertToData('#form-kna');
+    console.log(JSON.stringify(formData));
+});
+
 
 window.onload = onLoad;
 
@@ -59,5 +66,6 @@ document.getElementById("tgPartner").addEventListener("change", function () { ch
 document.getElementById("tgContact").addEventListener("change", function () { changeDisplay("contactScreen", this.checked) })
 
 document.getElementById("cb-bill2mail").addEventListener("change", function () { changeDisplay("bill2mail", this.checked) })
+
 
 
