@@ -17,7 +17,7 @@ function initApp() {
     var app = new Framework7({
         root: '#app',
         name: 'Mobile Buddy',
-        id: 'com.applicaiton.mbuddy',
+        id: 'com.application.mbuddy',
         panel: {
             swipe: 'left',
         }
@@ -39,10 +39,10 @@ function changeDisplay(className, cbVal) {
 }
 
 var $$ = Dom7;
+
 $$('.convert-form-to-data').on('click', function () {
     var formData = app.form.convertToData('#form-kna');
-    console.log("klick");
-    console.log(JSON.stringify(formData));
+    alert(JSON.stringify(formData));
 });
 
 
