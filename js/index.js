@@ -88,5 +88,5 @@ $$('.fill-form-from-data').on('click', function () {
         'cp-email': 'max@mustermann.de'
     }
     console.log(formData);
-    self.app.form.fillFromData('#form-kna', formData);
+    app.form.fillFromData('#form-kna', formData);
 });
