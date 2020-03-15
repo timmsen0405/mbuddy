@@ -86,6 +86,7 @@ $$('.fill-form-from-data').on('click', function () {
         'cp-mobilephone': '0152345678',
         'cp-email': 'max@mustermann.de'
     }
+    console.log(formData);
     app.form.fillFromData('#form-kna', formData);
 });
 
