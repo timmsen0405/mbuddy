@@ -63,7 +63,7 @@ document.getElementById("cb-bill2mail").addEventListener("change", function () {
 var $$ = Dom7;
 
 $$('.convert-form-to-data').on('click', function () {
-    var formData = app.form.convertToData('#form-kna');
+    var formData = form.convertToData('#form-kna');
     alert(JSON.stringify(formData));
 });
 
@@ -87,6 +87,6 @@ $$('.fill-form-from-data').on('click', function () {
         'cp-email': 'max@mustermann.de'
     }
     console.log(formData);
-    app.form.fillFromData('#form-kna', formData);
+    form.fillFromData('#form-kna', formData);
 });
 
